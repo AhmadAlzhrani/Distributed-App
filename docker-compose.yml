@@ -4,7 +4,7 @@ services:
 
   jsapp:
     container_name: jsapp
-    image: francescoxx/jsapp
+    image: ahmad/jsapp
     build:
       context: js
     ports:
@@ -20,7 +20,7 @@ services:
 
   pythonapp:
     container_name: pythonapp
-    image: francescoxx/pythonapp
+    image: ahmad/pythonapp
     build:
       context: python
     ports:
@@ -33,7 +33,7 @@ services:
   db:
     container_name: db
     image: postgres:12
-    ports: 
+    ports:
       - "5432:5432"
     environment:
       - POSTGRES_USER=postgres

@@ -8,7 +8,7 @@ app.use(express.json())
 // const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello Docker World!')
+  res.send('Hello coe427 js!')
 })
 
 app.post('/users', async (req, res) => {

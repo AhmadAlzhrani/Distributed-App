@@ -26,7 +26,7 @@ db.create_all()
 
 @app.route('/', methods=['GET'])
 def get():
-  return "Hello python"
+  return "Hello coe 427 python"
 
 # Create Item
 @app.route('/items', methods=['POST'])
