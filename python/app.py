@@ -1,8 +1,11 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
 import os
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # postgresql://postgres:postgres@localhost/DBNAME
 if __name__ == '__main__':
@@ -25,11 +28,13 @@ class Items(db.Model):
 db.create_all()
 
 @app.route('/', methods=['GET'])
+@cross_origin()
 def get():
   return "Hello coe 427 python"
 
 # Create Item
 @app.route('/items', methods=['POST'])
+@cross_origin()
 def itemadd():
   body = request.get_json()
 

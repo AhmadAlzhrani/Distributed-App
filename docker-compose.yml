@@ -8,13 +8,13 @@ services:
     build:
       context: js
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       - PGDATABASE=postgres
       - PGUSER=postgres
       - PGPASSWORD=postgres
       - PGHOST=db
-      - EXTERNALPORT=3000
+      - EXTERNALPORT=3001
     depends_on:
       - db
 
